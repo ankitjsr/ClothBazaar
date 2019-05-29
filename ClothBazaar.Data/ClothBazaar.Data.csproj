@@ -48,11 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BazaarContext.cs" />
+    <Compile Include="Migrations\201905291620589_initialsetup.cs" />
+    <Compile Include="Migrations\201905291620589_initialsetup.Designer.cs">
+      <DependentUpon>201905291620589_initialsetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothBazaar.Entity\ClothBazaar.Entity.csproj">
+      <Project>{84fe9b12-d14f-4853-93fc-dccc99dfbf93}</Project>
+      <Name>ClothBazaar.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905291620589_initialsetup.resx">
+      <DependentUpon>201905291620589_initialsetup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

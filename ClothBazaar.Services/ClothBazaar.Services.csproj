@@ -48,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductServices.cs" />
+    <Compile Include="CategoryServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothBazaar.Data\ClothBazaar.Data.csproj">
+      <Project>{b5b56be5-a86d-4f3b-a7a2-3b7bc6d9cca7}</Project>
+      <Name>ClothBazaar.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClothBazaar.Entity\ClothBazaar.Entity.csproj">
+      <Project>{84FE9B12-D14F-4853-93FC-DCCC99DFBF93}</Project>
+      <Name>ClothBazaar.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,48 @@
+﻿@model List<ClothBazaar.Entity.Product>
+@{
+    ViewBag.Title = "List Of Product";
+}
+
+<h2>List Of Product</h2>
+
+@if (!Model.Any())
+{
+    <p class="text-center">There is no Product!!</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <td><h5>Product Name</h5></td>
+            </tr>
+            <tr>
+                <td><h5>Category</h5></td>
+            </tr>
+            <tr>
+                <td><h5>Price</h5></td>
+            </tr>
+            <tr>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                </tr>
+                <tr>
+                    <td>@item.Category</td>
+                </tr>
+                <tr>
+                    <td>@item.Price</td>
+                </tr>
+                <tr>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
